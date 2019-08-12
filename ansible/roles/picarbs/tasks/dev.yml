@@ -2,7 +2,6 @@
   become: yes
   pacman:
     name:
+      - base-devel
       - git
-      - make
-      - strip
     state: present

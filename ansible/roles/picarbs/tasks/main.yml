@@ -24,7 +24,7 @@
     state: present
 
 - import_tasks: users.yml
-- import_tasks: aur.yml
 - import_tasks: dev.yml
+- import_tasks: aur.yml
 - import_tasks: python.yml
 
