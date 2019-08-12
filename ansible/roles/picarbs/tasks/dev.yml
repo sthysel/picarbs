@@ -1,0 +1,8 @@
+- name: Install dev tools
+  become: yes
+  pacman:
+    name:
+      - git
+      - make
+      - strip
+    state: present

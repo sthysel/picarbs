@@ -2,9 +2,9 @@
   become: yes
   user:
     name: "{{picarbs_user}}"
-    groups: wheel, docker
+    groups: wheel
     append: yes
-    shell: /bin/zsh
+    shell: /bin/bash
 
 - name: Backup user
   become: yes
