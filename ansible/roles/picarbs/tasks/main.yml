@@ -1,0 +1,29 @@
+- name: update the system
+  become: yes
+  pacman:
+    update_cache: yes
+    upgrade: yes
+
+- name: Install some common tools and core dependencies
+  become: yes
+  pacman:
+    name:
+      - ansible
+      - curl
+      - git
+      - htop
+      - make
+      - neofetch
+      - pacman-contrib
+      - rsync
+      - stow
+      - wget
+      - xclip
+      - xdotool
+      - xsel
+    state: present
+
+- import_tasks: users.yml
+- import_tasks: aur.yml
+- import_tasks: python.yml
+
