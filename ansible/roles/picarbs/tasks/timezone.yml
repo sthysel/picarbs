@@ -1,0 +1,8 @@
+- name: Set timezone to Perth
+  tags:
+    - time
+  become: yes
+  file:
+    src: /usr/share/zoneinfo/Australia/Perth
+    dest: /etc/localtime
+    state: link

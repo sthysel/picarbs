@@ -1,0 +1,8 @@
+- name: Make sure time is synced
+  tags:
+    - time
+  become: yes
+  systemd:
+    name: systemd-timesyncd
+    enabled: yes
+    state: restarted
